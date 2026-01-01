@@ -40,10 +40,6 @@ class basicBlock(nn.Module):
 
       return out
 
-      out += self.shortcut(x)
-      out = F.relu(out)
-
-      out = self.conv2(out)
 
 
 x = torch.randn(1, 3, 32, 32)
