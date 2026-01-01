@@ -12,7 +12,7 @@ class basicBlock(nn.Module):
       self.bn1 = nn.BatchNorm2d(out_channels)
 
       self.conv2 = nn.Conv2d(
-          out_channels, out_channels, kernel_size=3 , stride = stride, padding=1, bias=False
+          out_channels, out_channels, kernel_size=3 , stride = 1, padding=1, bias=False
           )
       self.bn2 = nn.BatchNorm2d(out_channels)
 
@@ -39,12 +39,3 @@ class basicBlock(nn.Module):
       out = F.relu(out)
 
       return out
-
-
-
-x = torch.randn(1, 3, 32, 32)
-
-block = basicBlock(in_channels=3, out_channels=64, stride=1)
-y = block(x)
-
-print("Output shape:", y.shape)
