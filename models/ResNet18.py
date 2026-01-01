@@ -45,11 +45,6 @@ class ResNet18(nn.Module):
         return self.fc(x)
     
 
-model = ResNet18()
-x = torch.randn(1, 3, 64, 64)
-y = model(x)
-print(y.shape)   # must be [1, 200]
-
         
     
      
